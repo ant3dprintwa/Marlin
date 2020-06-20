@@ -136,13 +136,13 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 //#define KAY3D_CoreXY_E3 // Choose this only if you have the KAY3D CoreXY based on the Ender 3. There are available .bin files also in the firmware section. 
 //#define KAY3D_CoreXY_E5 // Choose this only if you have the KAY3D CoreXY based on the Ender 5/Pro. There are available .bin files also in the firmware section. 
 //#define KAY3D_CoreXY_E5P // Choose this only if you have the KAY3D CoreXY based on the Ender 5 Plus. There are available .bin files also in the firmware section. 
-#define Ender_3 // Choose this if you have the Ender 3 or Ender 3-Pro
+//#define Ender_3 // Choose this if you have the Ender 3 or Ender 3-Pro
 //#define Ender_5 // Choose this if you have the Ender 5 or Ender 5 Pro
 //#define Ender_5_2 // Choose this configuration ONLY if the first ender 5 configuration doesn't work
 //#define Ender_5plus // Chose this is you have the Ender 5-Plus. You need to have TFT lcd control. Cheetah 5.0 does not work with stock touchscreen.
 //#define Ender_5pro // Choose this if you have the Ender 5-Pro
 //#define CR_10 // Choose this if you have Creality CR-10 
-//#define CR_10S // Choose this if you have a Creality CR-10s
+#define CR_10S // Choose this if you have a Creality CR-10s
 //#define CR_10S5 // Choose this if you have a Creality-10 S5 
 //#define CR_10V2 // Choose this if you have a Crealit-10 V2
 //#define Sidewinder_x1 // Choose this if you have an Artillery Sidewinder_x1. Please make sure you have a compatible LCD screen with your chosen board or your compilation will fail. Default is set to CR10_DIPLSY
@@ -212,17 +212,17 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** *** Section 7 - Choose the hotend that you are using. There should only be one active selection here *** *** ***/ 
 
-#define Creality_mk8 // Choose this hotend if you are using the stock hotend from Creality's Ender 3/ cr-10/ microswiss but using Creality's thermistor
+//#define Creality_mk8 // Choose this hotend if you are using the stock hotend from Creality's Ender 3/ cr-10/ microswiss but using Creality's thermistor
 //#define Sidewinder_x1hotend //Choose this hotend if you have the stock hotend from Artillery's Sidewinder X1
 //#define E3D_v6 // Choose this hotend if you are using E3D's V6 hotend
 //#define E3D_volcano // Choose this hotend if you are using E3D's volcano hotend
 //#define E3D_hemera // Choose this hotend if you are using E3D's volcano hotend
 //#define Slice_moquito // Choose this hotend if you are using slice engineering's mosquito hotend
-//#define Custom_hotend //Choose this if you have a custom_hotend using special thermistors
+#define Custom_hotend //Choose this if you have a custom_hotend using special thermistors
 
 /*if have a Custom_hotend, define your values below. If not, skip this section and continue below*/
 #if ENABLED(Custom_hotend) 
-#define TEMP_SENSOR_0 change_value // you can find Marlin defined values regarding the thermistor you are using. 
+#define TEMP_SENSOR_0 5 // you can find Marlin defined values regarding the thermistor you are using. 
 #endif
 
 /*** *** *** Section 8 - Choose the heated bed that you are using. There should only be one active selection here*** *** ***/ 
@@ -238,18 +238,18 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** ***  Section 9A - Do you have an auto bed leveling sensor installed? **** *** ***/
 
-//#define Auto_bed_level // Please ignore if you DO NOT have an auto bed levelling sensor installed
+#define Auto_bed_level // Please ignore if you DO NOT have an auto bed levelling sensor installed
 
 /*** *** ***  Section 9B - Do you have an auto bed leveling sensor installed? **** *** ***/
 
-#define Manual_mesh_bed_level // You can enable MANUAL bed mesh leveling by enabling this option. You can also ignore if you like. Do not enable if you have ABL installed.
+//#define Manual_mesh_bed_level // You can enable MANUAL bed mesh leveling by enabling this option. You can also ignore if you like. Do not enable if you have ABL installed.
 
 /*** *** *** Section 10 - If you have a sensor installed, choose the one you're using. Skip this section if you DO NOT have an auto bed levelling sensor installed *** *** ****/
 
 //#define KAVA_SENSOR
 //#define BLTOUCH //define this if you have a BL touch REGARDLESS of your BLtouch version
 //#define BLTOUCH_v3_v3_1 //define this ONLY if your bltouch is version 3 or 3.1. Check at the back of BLtouch's board if you are unsure
-//#define FIX_MOUNTED_PROBE //define this if you have a fixed probe sensor - capacitive sensor
+#define FIX_MOUNTED_PROBE //define this if you have a fixed probe sensor - capacitive sensor
 //#define TOUCH_MI_PROBE // define this if you have a TOUCH-MI sensor.
 
 /*** *** ***  Section 11A - Customize your Auto and Manual mesh bed leveling settings here. Otherwise ignore this section *** *** ***/
@@ -265,7 +265,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** ***  Section 11B - Customize your BLTOUCH/ Capacitive sensor settings here. Otherwise ignore this section *** *** ***/
 
-#define MIN_PROBE_EDGE 10 //Change this value to 20 if you have clips holding down your print surface. 10 is a good value if you don't have clips. This is how far you want your BLtouch to probe from the EDGES of the bed
+#define MIN_PROBE_EDGE 45 //Change this value to 20 if you have clips holding down your print surface. 10 is a good value if you don't have clips. This is how far you want your BLtouch to probe from the EDGES of the bed
 
 /*** *** ***  Section 11C - Customize your Manual Mesh bed leveling settings here. Otherwise ignore this section *** *** ***/
 
@@ -282,7 +282,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 //#define Herome_fanduct_40105015 //choose this if you use Ender 3/pro, the hero me fan duct from thingiverse with single 4010 or 5015 fan. thing: 3182917
 //#define Herome_fanduct_dual5015 //choose this if you use Ender 3/pro, the hero me fan duct from thingiverse with dual 5015 fans. thing: 3182917
 //#define Bltouch_creality_kit //choose this if you use Ender 3/pro, the original bltouch mount from Creality's BLTouch kit
-//#define Petsfang_fanduct //choose this if you use Ender 3/pro, the petsfang duct from thingiverse. thing: 2759439
+#define Petsfang_fanduct //choose this if you use Ender 3/pro, the petsfang duct from thingiverse. thing: 2759439
 //#define Simple_bltouch_mount //thingiverse: thing:3148733 Only works with stock & microswiss hotend on Ender 3/Pro Only. Use above mounts for other hotends such as E3D V6/ Mosquito
 //#define Custom_ABL_mount //If you do not use any of these mounts on your machine, uncomment this to declare your own probe to nozzle values
 
@@ -295,7 +295,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 #define ADVANCED_PAUSE_FEATURE  //Activate this feature if you want to have Filament change and Pause enabled.
 //#define Nozzle_topright_park // Nozzle is Automatically parked on top left of bed by default during pause & filament change. KAY3D CoreXY machines park on the rear instead. Define this if you want the nozzle to be parked on the top right instead.
-#define Total_filament_path 475 // Please measure the entire distance fron the Extruder to the the tip of the nozzle as accurately as possible. Replace change_value with your measured value here in mm units. NOT ft/inch.
+#define Total_filament_path 520 // Please measure the entire distance fron the Extruder to the the tip of the nozzle as accurately as possible. Replace change_value with your measured value here in mm units. NOT ft/inch.
 
 /*** *** *** Section 13B - Additional Sensors. E.g. Filament Sensors. This is where you activate and define your settings *** *** ***/
 //#define FILAMENT_RUNOUT_SENSOR // Define this if you have a filament sensor. Please ensure it is connected to your mainboard and NOT your TFT
