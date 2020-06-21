@@ -256,7 +256,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 #if ENABLED(BED_PROBE_GRID_COUNT)  //You can ignore this line of code
 
-  #define GRID_MAX_POINTS_X 4 //Recommended value: 4. If you want to probe a 3x3 grid (9 times), choose 3. Choose 5 if you want to probe a 5x5 grid (25 times)
+  #define GRID_MAX_POINTS_X 5 //Recommended value: 4. If you want to probe a 3x3 grid (9 times), choose 3. Choose 5 if you want to probe a 5x5 grid (25 times)
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X //You can ignore this line of code if you are unfamiliar with it. 
 #endif
 
@@ -304,7 +304,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** *** Section 14 - Advanced Printer Settings. Change them or you can leave them as default *** *** ***/
 
-//#define INVERT_XYZ // Define this function only if your XYZ is going in the wrong direction!!! This inverts all 3 axis(s) together. Does not work with Custom_Printer. Change settigns in that section!
+#define INVERT_XYZ // Define this function only if your XYZ is going in the wrong direction!!! This inverts all 3 axis(s) together. Does not work with Custom_Printer. Change settigns in that section!
 #define INVERT_E0_DIR true // This is for your Extruder's direction. Change value to false if you need your extruder motor to rotate the other way
 #define THERMAL_PROTECTION_LEVEL 2 // Acceptable values are 1 (default), 2 and 3. If you have false positives, choose 1. If you want more aggressive thermal runaway settings, choose 3.
 #define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves. Change if you like
