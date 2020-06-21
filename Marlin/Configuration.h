@@ -792,9 +792,9 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  #define DEFAULT_Kp 50.47
+  #define DEFAULT_Ki 6.92
+  #define DEFAULT_Kd 92.05
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
