@@ -52,7 +52,7 @@
 /*Store all known hotend data here*/
 
 #if ENABLED (Ender_regular)
-#define e__steps 93
+#define e__steps 94.4
 #endif
 
 #if ENABLED (Ender_regular_metal)
