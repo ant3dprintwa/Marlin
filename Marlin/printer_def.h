@@ -187,9 +187,9 @@
 #define SHOW_CUSTOM_BOOTSCREEN // Show the bitmap in Marlin/_Bootscreen.h on startup.
 //#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 #define CHOPPER_TIMING CHOPPER_DEFAULT_12V
-#define x_steps 80
-#define y_steps 80
-#define z_steps 400
+#define x_steps 79.602
+#define y_steps 79.84
+#define z_steps 401.606
 #define X_HOME_DIR -1 //This defines the homing direction. Change between values of 1 and -1 to change direction
 #define Y_HOME_DIR -1 //This defines the homing direction. Change between values of 1 and -1 to change direction
 #define Z_HOME_DIR -1 //This defines the homing direction. Change between values of 1 and -1 to change direction

@@ -194,7 +194,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 
 /*** *** **** Section 6 - Choose your Extruder type. There should only be one active selection here *** *** ***/
 
-#define Ender_regular // e-steps: 93. Plastic extruder used stock Ender-3/Pro and CR-10 
+//#define Ender_regular // e-steps: 93. Plastic extruder used stock Ender-3/Pro and CR-10 
 //#define Ender_regular_metal // e-steps: 97.3.  Metal extruder used stock Ender-3/Pro and CR-10 
 //#define Ender_metaldualdrive // e-steps: 140. Usually red in color with TWO toothed gears
 //#define E3D_hemera_extruder // e-steps: 409. If over extruder please change e steps via GCODE M92XXX where XXX = number of correct steps
@@ -203,11 +203,11 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
 //#define Zesty_nimble // e-steps: 2700. Zesty Nimble extruder
 //#define SEEMECNCEZRSTRUDER // e-steps: 94.86
 //#define E3D_titanaero_extruder // e-steps: 837. TITAN AERO hotend's extruder
-//#define custom_extruder // Please use this if you have your own custom extruder with unique esteps. 
+#define custom_extruder // Please use this if you have your own custom extruder with unique esteps. 
 
 /*if have a custom_extruder, define your values below. If not, skip this section and continue below */
 #if ENABLED (custom_extruder)
-#define e__steps change_value //e-steps is defined by the number of revolutions your extruder motor has to turn to define 10mm of filament.
+#define e__steps 99.3 //e-steps is defined by the number of revolutions your extruder motor has to turn to define 10mm of filament.
 #endif
 
 /*** *** *** Section 7 - Choose the hotend that you are using. There should only be one active selection here *** *** ***/ 
@@ -792,9 +792,9 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 50.47
-  #define DEFAULT_Ki 6.92
-  #define DEFAULT_Kd 92.05
+  #define DEFAULT_Kp 47.80
+  #define DEFAULT_Ki 6.41
+  #define DEFAULT_Kd 89.09
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -825,7 +825,7 @@ Board name: FYSETCV1_1A, FYSETCV1_1B, FYSETCV1_2A, FYSETCV1_2B, change_value = S
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
